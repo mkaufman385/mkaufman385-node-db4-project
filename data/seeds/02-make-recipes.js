@@ -5,12 +5,12 @@ const recipes = [
 ];
 
 const ingredients = [
-  { ingredients_name: "Broccoli", ingredient_unit: "lbs" },
-  { ingredients_name: "Pesto", ingredient_unit: "lbs" },
-  { ingredients_name: "Pasta", ingredient_unit: "lbs" },
-  { ingredients_name: "Lemon", ingredient_unit: "slices" },
-  { ingredients_name: "Chicken", ingredient_unit: "kilos" },
-  { ingredients_name: "Salmon", ingredient_unit: "grams" },
+  { ingredient_name: "Broccoli", ingredient_unit: "lbs" },
+  { ingredient_name: "Pesto", ingredient_unit: "lbs" },
+  { ingredient_name: "Pasta", ingredient_unit: "lbs" },
+  { ingredient_name: "Lemon", ingredient_unit: "slices" },
+  { ingredient_name: "Chicken", ingredient_unit: "kilos" },
+  { ingredient_name: "Salmon", ingredient_unit: "grams" },
 ];
 
 const step_ingredients = [
