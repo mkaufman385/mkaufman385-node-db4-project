@@ -23,6 +23,7 @@ async function getRecipeById(recipe_id) {
     recipe_name: recipeRows[0].recipe_name,
     steps: recipeRows.reduce((acc, row) => {
       if (!row.ingredient_id) {
+        //its a new step without any ingredients
         return acc.concat({
           step_id: row.step_id,
           step_number: row.step_number,
