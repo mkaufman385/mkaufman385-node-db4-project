@@ -30,6 +30,26 @@ async function getRecipeById(recipe_id) {
           step_text: row.step_text,
         });
       }
+      if (
+        row.ingredient_id &&
+        !acc.find((step) => step.step_id === row.step_id)
+      ) {
+        //its a new step with an ingredient
+        return acc.concat({
+          step_id: row.step_id,
+          step_number: row.step_number,
+          step_text: row.step_text,
+          ingredients: [
+            {
+              ingredient_id: row.ingredient_id,
+              ingredient_name: row.ingredient_name,
+              quantity: row.quantity,
+            },
+          ],
+        });
+      }
+
+      //its a step we have encountered before
       return acc;
     }, []),
   };
